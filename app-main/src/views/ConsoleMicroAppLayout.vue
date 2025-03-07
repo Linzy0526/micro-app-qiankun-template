@@ -28,7 +28,7 @@ const registerApp = (option = { appRouterBase: "/", mircroAppNames: [] }) => {
     registerMicroApps(
     option.mircroAppNames.map((appName) => ({
       name: appName,
-      entry: env.VITE_QIANKUN_MIRCRO_APP_ENTRY + (isDev ? '' : appName),
+      entry: env.VITE_QIANKUN_MIRCRO_APP_ENTRY + (isDev ? '' : appName + '/'), // prod: /app-child/app-child-vue3/ 对应nginx配置
       container: '#micro-app-layout',
       activeRule: option.appRouterBase + appName,
       props: {
