@@ -70,7 +70,7 @@ export default ({ mode }) => {
       // 设置为 false 可以禁用最小化混淆，
       // 或是用来指定使用哪种混淆器
       // boolean | 'terser' | 'esbuild'
-      minify: "terser", //terser 构建后文件体积更小
+      // minify: "terser", //terser 构建后文件体积更小
       //传递给 Terser 的更多 minify 选项。
       terserOptions: {},
       //设置为 false 来禁用将构建后的文件写入磁盘
